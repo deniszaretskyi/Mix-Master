@@ -1,4 +1,43 @@
+import {
+  About,
+  Cocktails,
+  Error,
+  HomeLayout,
+  Landing,
+  Newsletter,
+} from "./App/pages";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const App = () => {
-  return <h2>mixmaster starter</h2>;
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <HomeLayout />,
+      children: [
+        {
+          path: "about",
+          element: <About />,
+        },
+        {
+          path: "cocktails",
+          element: <Cocktails />,
+        },
+        {
+          index: true,
+          element: <Landing />,
+        },
+        {
+          path: "error",
+          element: <Error />,
+        },
+        {
+          path: "newsletter",
+          element: <Newsletter />,
+        },
+      ],
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 };
+
 export default App;
