@@ -1,15 +1,26 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import Nav from "../../../assets/wrappers/Navbar.js";
 
 const Navbar = () => {
   return (
-    <section className="navbar">
-      <h1 className="navbarText">mix master</h1>
-      <ul>
-        <Link to={"/"}>Home</Link>
-        <Link to={"/about"}>About</Link>
-        <Link to={"/newsletter"}>Newsletter</Link>
-      </ul>
-    </section>
+    <Nav>
+      <div className="navCenter">
+        <h1 className="navText">
+          mix <span>master</span>
+        </h1>
+        <ul className="navLinks">
+          <NavLink className="link" to={"/"} end>
+            Home
+          </NavLink>
+          <NavLink className="link" to={"/about"} end>
+            About
+          </NavLink>
+          <NavLink className="link" to={"/newsletter"} end>
+            Newsletter
+          </NavLink>
+        </ul>
+      </div>
+    </Nav>
   );
 };
 
