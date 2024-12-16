@@ -1,5 +1,5 @@
 /* ============= GLOBAL CSS =============== */
-
+@import url("https://fonts.googleapis.com/css2?family=Kite+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 *,
 ::after,
 ::before {
@@ -13,7 +13,7 @@ html {
 } /*16px*/
 
 body {
-  background-color: #f5f9f3;
+  background-color: #f6f8f5;
 }
 :root {
   --trasition: 0.3s all ease-in-out;
@@ -25,6 +25,16 @@ h4,
 h5 {
   text-transform: capitalize;
   letter-spacing: 1.25px;
+  font-family:
+    Kite One,
+    sans-serif;
+}
+p,
+li,
+button,
+input,
+.link {
+  font-family: Roboto, serif;
 }
 .link {
   color: inherit;
@@ -33,4 +43,10 @@ h5 {
 span,
 .active {
   color: #2a9244;
+}
+.page {
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 5rem 2rem 0;
 }

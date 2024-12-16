@@ -12,6 +12,7 @@ const App = () => {
     {
       path: "/",
       element: <HomeLayout />,
+      errorElement: <Error />,
       children: [
         {
           path: "about",
@@ -24,10 +25,6 @@ const App = () => {
         {
           index: true,
           element: <Landing />,
-        },
-        {
-          path: "error",
-          element: <Error />,
         },
         {
           path: "newsletter",
