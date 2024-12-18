@@ -7,6 +7,7 @@ import {
   Newsletter,
 } from "./App/pages";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { loader as landingLoader } from "./App/pages/Landing/Landing";
 const App = () => {
   const router = createBrowserRouter([
     {
@@ -25,6 +26,7 @@ const App = () => {
         {
           index: true,
           element: <Landing />,
+          loader: landingLoader,
         },
         {
           path: "newsletter",
