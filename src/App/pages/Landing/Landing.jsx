@@ -5,20 +5,16 @@ export const loader = async () => {
   const cocktailSearchUrl =
     "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
   const { inputVal, setIsLoading } = useGlobalContext();
-  try {
-    const resp = await axios.get(`${cocktailSearchUrl}${inputVal}`);
-    setIsLoading(false);
-    return resp;
-  } catch (error) {
-    console.log(error.message);
-  }
-  return resp;
+
+  const resp = await axios.get(`${cocktailSearchUrl}${inputVal}`);
+  setIsLoading(false);
+  return { drinks: resp?.data?.drinks };
 };
 
 const Landing = () => {
-  const data = useLoaderData();
+  const { drinks } = useLoaderData();
   const { setInputVal, isLoading } = useGlobalContext();
-  console.log(data);
+  console.log(drinks);
 
   if (isLoading) return <h1>Loading...</h1>;
 
@@ -35,7 +31,7 @@ const Landing = () => {
         <button>Search</button>
       </form>
       <section>
-        {data.data.drinks.map((item) => {
+        {drinks.map((item) => {
           const {
             idDrink,
             strDrink,
