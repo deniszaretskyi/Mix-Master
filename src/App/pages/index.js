@@ -1,8 +1,17 @@
-import About from "./About/About";
-import Cocktails from "./Cocktails/Cocktails";
-import Error from "./Error/Error";
-import HomeLayout from "./HomeLayout/HomeLayout";
-import Landing from "./Landing/Landing";
-import Newsletter from "./Newsletter/Newsletter";
+import About from "./About";
+import Cocktails from "./Cocktails";
+import Error from "./Error";
+import HomeLayout from "./HomeLayout";
+import Landing from "./Landing";
+import Newsletter from "./Newsletter";
+import SinglePageError from "./SinglePageError";
 
-export { About, Cocktails, Error, HomeLayout, Landing, Newsletter };
+export {
+  About,
+  Cocktails,
+  Error,
+  HomeLayout,
+  Landing,
+  Newsletter,
+  SinglePageError,
+};

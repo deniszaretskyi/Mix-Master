@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Nav = styled.nav`
-  background-color: #fff;
+  background-color: var(--background-color);
   padding: 1rem;
 
   .navCenter {
@@ -12,7 +12,7 @@ const Nav = styled.nav`
     margin: 0 auto;
   }
   .navText {
-    font-size: 2.25rem;
+    font-size: 1.75rem;
     letter-spacing: 2px;
   }
   .navLinks {

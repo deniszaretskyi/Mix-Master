@@ -1,5 +1,5 @@
-import Wrapper from "../../../assets/wrappers/AboutPage";
-import aboutImg from "../../../assets/aboutUsImg.svg";
+import Wrapper from "../../assets/wrappers/AboutPage";
+import aboutImg from "../../assets/aboutUs.svg";
 const About = () => {
   return (
     <Wrapper>

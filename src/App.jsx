@@ -5,9 +5,10 @@ import {
   HomeLayout,
   Landing,
   Newsletter,
+  SinglePageError,
 } from "./App/pages";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { loader as landingLoader } from "./App/pages/Landing/Landing";
+import { loader as landingLoader } from "./App/pages/Landing";
 const App = () => {
   const router = createBrowserRouter([
     {
@@ -18,19 +19,23 @@ const App = () => {
         {
           path: "about",
           element: <About />,
+          errorElement: <SinglePageError />,
         },
         {
           path: "cocktails",
           element: <Cocktails />,
+          errorElement: <SinglePageError />,
         },
         {
           index: true,
           element: <Landing />,
           loader: landingLoader,
+          errorElement: <SinglePageError />,
         },
         {
           path: "newsletter",
           element: <Newsletter />,
+          errorElement: <SinglePageError />,
         },
       ],
     },
