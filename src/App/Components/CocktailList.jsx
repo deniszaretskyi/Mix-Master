@@ -1,4 +1,6 @@
 import Wrapper from "../../assets/wrappers/CocktailList";
+import CocktailCard from "./CocktailCard";
+
 const CocktailList = ({ drinks }) => {
   if (!drinks) return <h2>No matching cocktails were found...</h2>;
   return (
@@ -11,15 +13,7 @@ const CocktailList = ({ drinks }) => {
           strInstructions,
           strDrinkThumb,
         } = item;
-        return (
-          <div className="drink" key={idDrink}>
-            <img width={150} src={strDrinkThumb} alt="image" />
-            <div className="drinkText">
-              <h3>{strDrink}</h3>
-              <p>{strCategory}</p>
-            </div>
-          </div>
-        );
+        return <CocktailCard key={idDrink} {...item} />;
       })}
     </Wrapper>
   );

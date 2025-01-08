@@ -12,6 +12,7 @@ const Wrapper = styled.div`
     justify-content: left;
     width: 100%;
     padding: 1rem;
+    border-radius: 8px;
   }
   .drink:hover {
     background-color: var(--background-color);
@@ -20,11 +21,11 @@ const Wrapper = styled.div`
   .drink::after {
     content: "";
     position: absolute;
-    bottom: -0.2rem;
+    bottom: -1.2rem;
     left: 0;
     width: 100%;
     height: 0.1rem;
-    background-color: #fff;
+    background-color: var(--white);
   }
   .drink img {
     object-fit: cover;

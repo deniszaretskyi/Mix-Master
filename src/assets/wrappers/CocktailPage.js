@@ -1,47 +1,67 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Wrapper = styled.div`
-  header {
-    text-align: center;
-    margin-bottom: 3rem;
-    .btn {
-      margin-bottom: 1rem;
-    }
+  img {
+    object-fit: cover;
+    width: 40%;
+    max-width: 15rem;
+    border-radius: 8px;
   }
-  .img {
-    border-radius: var(--borderRadius);
+  .cocktailImgTitle {
+    position: relative;
+    max-width: 40rem;
+    display: flex;
+    column-gap: 2rem;
+    justify-content: space-between;
+    align-items: top;
+    margin: 0 auto 5rem;
   }
-  .drink-info {
-    padding-top: 2rem;
+  .cocktailTitleInfo h2 {
+    position: relative;
+    font-size: 2.2rem;
+    letter-spacing: 0.2rem;
+    margin: 0 0 2rem;
   }
-  .drink p {
-    font-weight: 700;
+
+  .cocktailTitleInfo p {
     text-transform: capitalize;
-    line-height: 2;
+    font-size: 1.2rem;
+  }
+  .measuresAndIngredients {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    max-width: 40rem;
+    margin: 0 auto 2rem;
+    column-gap: 0;
+  }
+  .wrapper {
+    max-width: 40rem;
+    margin: 0 auto 2rem;
+  }
+  .wrapper h4 {
+    text-align: start;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+  }
+  .measuresAndIngredients p {
+    font-size: 1.1rem;
+    position: relative;
+    margin-bottom: 0.4rem;
+  }
+  .instructions {
+    margin: 0 auto 2rem;
+    max-width: 40rem;
+  }
+  .instructions h4 {
+    font-size: 1.7rem;
     margin-bottom: 1rem;
+    letter-spacing: 2px;
   }
-  .drink-data {
-    margin-right: 0.5rem;
-    background: var(--primary-300);
-    padding: 0.25rem 0.5rem;
-    border-radius: var(--borderRadius);
-    color: var(--primary-700);
-    letter-spacing: var(--letterSpacing);
-  }
-  .ing {
-    display: inline-block;
-    margin-right: 0.5rem;
-  }
-  @media (min-width: 992px) {
-    .drink {
-      display: grid;
-      grid-template-columns: 2fr 3fr;
-      gap: 3rem;
-      align-items: center;
-    }
-    .drink-info {
-      padding-top: 0;
-    }
+  .instructions p {
+    font-size: 1.2rem;
+    line-height: 1.5;
   }
 `;
 
