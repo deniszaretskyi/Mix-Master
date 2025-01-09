@@ -6,7 +6,7 @@ export const loader = async () => {
   const cocktailSearchUrl =
     "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 
-  const inputVal = "margarita";
+  const inputVal = "negroni";
 
   const resp = await axios.get(`${cocktailSearchUrl}${inputVal}`);
 
